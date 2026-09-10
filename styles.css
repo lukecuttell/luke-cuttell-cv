@@ -109,13 +109,13 @@ ul { list-style: disc; }
 }
 
 .tagline {
-  font: 600 54px/0.88 var(--serif);
-  letter-spacing: -2px;
+  font: 400 54px/0.88 var(--serif);
+  letter-spacing: -1px;
   margin-bottom: 3mm;
 }
 .tagline em {
   font-style: italic;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .intro {
