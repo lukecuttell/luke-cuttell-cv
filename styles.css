@@ -104,16 +104,9 @@ ul { list-style: disc; }
   margin-bottom: 2mm;
 }
 
-.hero-name {
-  font: 400 40px/1 var(--sans);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 2mm;
-}
-
 .tagline {
-  font: 700 48px/0.92 var(--serif);
-  letter-spacing: -1.5px;
+  font: 700 64px/0.88 var(--serif);
+  letter-spacing: -2px;
   margin-bottom: 3mm;
 }
 .tagline em {
@@ -125,7 +118,7 @@ ul { list-style: disc; }
   font-size: 11px;
   line-height: 1.5;
   max-width: 92mm;
-  color: #C8DDD3;
+  color: #f5f5f5;
   flex: 1;
 }
 
@@ -162,10 +155,10 @@ ul { list-style: disc; }
 
 .brand-shape {
   position: absolute;
-  right: -70mm;
-  top: -55mm;
-  width: 260mm;
-  height: 260mm;
+  right: -30mm;
+  top: -50mm;
+  width: 220mm;
+  height: 220mm;
   pointer-events: none;
   z-index: 0;
 }
@@ -188,7 +181,7 @@ ul { list-style: disc; }
   margin: 0 8mm;
   border-bottom: 1px solid var(--rule);
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .metric {
@@ -239,6 +232,7 @@ ul { list-style: disc; }
   color: var(--muted);
   text-transform: uppercase;
   flex: 1;
+  text-align: right;
   border-bottom: 1px solid var(--rule);
   padding-bottom: 2mm;
 }
@@ -251,7 +245,8 @@ ul { list-style: disc; }
 
 .expertise-grid article {
   padding: 4mm;
-  border-top: 2px solid var(--forest);
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 2px 8px rgba(0,0,0,.04);
 }
 
 .expertise-icon {
@@ -297,7 +292,7 @@ ul { list-style: disc; }
 }
 
 .footer-quote p {
-  font: italic 16px/1.25 var(--serif);
+  font: italic 500 20px/1.2 var(--serif);
   max-width: 88mm;
 }
 
@@ -379,7 +374,7 @@ ul { list-style: disc; }
   display: grid;
   grid-template-columns: 18mm 8mm 1fr;
   position: relative;
-  padding-bottom: 5mm;
+  padding-bottom: 7mm;
 }
 .role:last-child { padding-bottom: 2mm; }
 
@@ -648,10 +643,9 @@ ul { list-style: disc; }
 
   .monogram { font-size: 32px; margin-bottom: 12px; }
   .eyebrow { font-size: clamp(10px, 2.5vw, 12px); letter-spacing: 2px; margin-bottom: 8px; }
-  .hero-name { font-size: clamp(24px, 7vw, 40px); letter-spacing: 1px; margin-bottom: 8px; }
-  .tagline { font-size: clamp(28px, 8vw, 48px); letter-spacing: -1px; margin-bottom: 16px; }
+  .tagline { font-size: clamp(32px, 9vw, 56px); letter-spacing: -1px; margin-bottom: 16px; }
   .tagline br { display: none; }
-  .intro { font-size: clamp(14px, 3.5vw, 16px); line-height: 1.6; max-width: none; color: #C8DDD3; }
+  .intro { font-size: clamp(14px, 3.5vw, 16px); line-height: 1.6; max-width: none; color: #f5f5f5; }
   .hero-actions { padding-top: 16px; }
   .btn { font-size: 13px; padding: 12px 24px; letter-spacing: 0.5px; }
   .btn span { font-size: 18px; }
@@ -687,7 +681,7 @@ ul { list-style: disc; }
     gap: 12px;
   }
 
-  .expertise-grid article { padding: 16px; border-top-width: 3px; }
+  .expertise-grid article { padding: 16px; }
   .expertise-icon { width: 24px; height: 24px; margin-bottom: 8px; }
   .expertise-grid h3 { font-size: clamp(16px, 4vw, 20px); margin-bottom: 6px; }
   .expertise-grid p { font-size: clamp(13px, 3vw, 14px); line-height: 1.5; }
@@ -756,7 +750,6 @@ ul { list-style: disc; }
     padding: 16px;
     margin-top: 12px;
     gap: 16px;
-    border-top: 3px solid var(--forest);
   }
 
   .engagements-label { font-size: 9px; margin-bottom: 8px; }
