@@ -1,23 +1,24 @@
 /* ================================================================
-   Luke Cuttell — Digital CV
-   Premium editorial design · Forest green & warm cream
+   Luke Cuttell — Digital CV v2
+   Editorial · 4px grid · #003A31 deep forest
    ================================================================ */
 
 @page { size: A4; margin: 0; }
 
 :root {
-  --forest:      #2D4A3E;
-  --forest-deep: #1E3630;
-  --forest-mid:  #3D6B56;
-  --sage:        #7A9B8C;
+  --forest:      #003A31;
+  --forest-deep: #00261F;
+  --forest-mid:  #0D4F43;
+  --sage:        #4A7C6F;
+  --sage-light:  #7BA99A;
 
   --cream:       #FAF7F0;
   --cream-dark:  #F0ECE2;
   --ink:         #1A1E1C;
   --ink-soft:    #3D4642;
-  --muted:       #64706B;
+  --muted:       #5A6862;
   --rule:        #D4CFC4;
-  --rule-light:  #E4DFD6;
+  --rule-light:  #E8E4DA;
 
   --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --sans:  "Inter", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -26,7 +27,13 @@
 /* ---- Reset ---- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-body { font-family: var(--sans); color: var(--ink); background: #E0DDD6; padding: 32px; line-height: 1.4; }
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: #DDDAD4;
+  padding: 32px;
+  line-height: 1.4;
+}
 a { color: inherit; text-decoration: none; }
 strong { font-weight: 700; }
 img { display: block; max-width: 100%; height: auto; }
@@ -40,7 +47,7 @@ ul { list-style: disc; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 28px;
+  gap: 32px;
 }
 
 .page {
@@ -64,17 +71,17 @@ ul { list-style: disc; }
    ================================================================ */
 
 .hero {
-  height: 114mm;
+  height: 116mm;
   background: var(--forest-deep);
   color: #fff;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: 1.1fr 0.9fr;
   position: relative;
   overflow: hidden;
 }
 
 .hero-content {
-  padding: 9mm 6mm 7mm 9mm;
+  padding: 8mm 4mm 6mm 8mm;
   position: relative;
   z-index: 2;
   display: flex;
@@ -82,33 +89,32 @@ ul { list-style: disc; }
 }
 
 .monogram {
-  font: 700 26px/1 var(--serif);
+  font: 700 28px/1 var(--serif);
   letter-spacing: -1.5px;
-  margin-bottom: 5mm;
+  margin-bottom: 3mm;
 }
 .monogram span { color: var(--sage); }
 
 .eyebrow {
-  font-size: 6.5px;
+  font-size: 10px;
   letter-spacing: 2.5px;
   font-weight: 600;
   text-transform: uppercase;
-  opacity: 0.75;
-  margin-bottom: 2.5mm;
+  opacity: 0.6;
+  margin-bottom: 2mm;
 }
 
 .hero-name {
-  font: 600 13px/1 var(--sans);
-  letter-spacing: 4px;
+  font: 400 40px/1 var(--sans);
+  letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 3mm;
-  opacity: 0.9;
+  margin-bottom: 2mm;
 }
 
 .tagline {
-  font: 700 30px/0.94 var(--serif);
-  letter-spacing: -1px;
-  margin-bottom: 5mm;
+  font: 700 48px/0.92 var(--serif);
+  letter-spacing: -1.5px;
+  margin-bottom: 3mm;
 }
 .tagline em {
   font-style: italic;
@@ -116,15 +122,15 @@ ul { list-style: disc; }
 }
 
 .intro {
-  font-size: 9px;
-  line-height: 1.55;
-  max-width: 82mm;
-  color: #D8E8E0;
+  font-size: 11px;
+  line-height: 1.5;
+  max-width: 92mm;
+  color: #C8DDD3;
   flex: 1;
 }
 
 .hero-actions {
-  padding-top: 4mm;
+  padding-top: 3mm;
 }
 
 /* Buttons */
@@ -133,22 +139,19 @@ ul { list-style: disc; }
   align-items: center;
   gap: 8px;
   padding: 3mm 5mm;
-  border-radius: 999px;
-  font-size: 8px;
-  font-weight: 800;
-  letter-spacing: 0.3px;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: opacity 0.15s ease;
 }
-.btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 3px 10px rgba(0,0,0,.18);
-}
+.btn:hover { opacity: 0.85; }
 .btn span { font-size: 14px; line-height: 1; }
 
 .btn--light { background: #fff; color: var(--forest-deep); }
 .btn--dark  { background: var(--forest); color: #fff; }
 
-/* Portrait */
+/* Portrait + Brand Shape */
 .hero-portrait {
   position: relative;
   display: flex;
@@ -157,27 +160,23 @@ ul { list-style: disc; }
   overflow: hidden;
 }
 
-.hero-portrait::before {
-  content: "";
+.brand-shape {
   position: absolute;
-  width: 110mm;
-  height: 110mm;
-  border-radius: 50%;
-  right: -35mm;
-  top: -40mm;
-  border: 14mm solid rgba(255,255,255,.05);
-  box-shadow: 0 0 0 14mm rgba(255,255,255,.03);
+  right: -70mm;
+  top: -55mm;
+  width: 260mm;
+  height: 260mm;
   pointer-events: none;
+  z-index: 0;
 }
 
 .hero-portrait img {
   position: relative;
   z-index: 1;
-  width: 90%;
-  max-height: 114mm;
+  width: 88%;
+  max-height: 116mm;
   object-fit: cover;
   object-position: top center;
-  filter: saturate(.9);
 }
 
 /* ================================================================
@@ -185,7 +184,7 @@ ul { list-style: disc; }
    ================================================================ */
 
 .metrics {
-  height: 27mm;
+  height: 24mm;
   margin: 0 8mm;
   border-bottom: 1px solid var(--rule);
   display: grid;
@@ -193,21 +192,21 @@ ul { list-style: disc; }
 }
 
 .metric {
-  padding: 4.5mm 2.5mm;
+  padding: 4mm 2mm;
   border-right: 1px solid var(--rule-light);
 }
 .metric:last-child { border-right: 0; }
 
 .metric strong {
   display: block;
-  font: 700 16px/1 var(--serif);
+  font: 600 20px/1 var(--serif);
   color: var(--forest);
-  margin-bottom: 1.5mm;
+  margin-bottom: 1mm;
 }
 
 .metric span {
-  font-size: 6.5px;
-  line-height: 1.3;
+  font-size: 7.5px;
+  line-height: 1.35;
   color: var(--muted);
   display: block;
 }
@@ -217,26 +216,26 @@ ul { list-style: disc; }
    ================================================================ */
 
 .expertise {
-  padding: 6mm 8mm 0;
+  padding: 5mm 8mm 0;
 }
 
 .section-header {
   display: flex;
   align-items: center;
-  gap: 5mm;
+  gap: 4mm;
   margin-bottom: 4mm;
 }
 
 .section-header h2 {
-  font: 700 21px/1 var(--serif);
+  font: 600 28px/1 var(--serif);
   letter-spacing: -0.5px;
   color: var(--ink);
   white-space: nowrap;
 }
 
 .header-rule {
-  font-size: 5.5px;
-  letter-spacing: 1.8px;
+  font-size: 7px;
+  letter-spacing: 2px;
   color: var(--muted);
   text-transform: uppercase;
   flex: 1;
@@ -247,13 +246,11 @@ ul { list-style: disc; }
 .expertise-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3mm;
+  gap: 4mm;
 }
 
 .expertise-grid article {
-  background: var(--cream-dark);
-  padding: 4.5mm;
-  border-radius: 2mm;
+  padding: 4mm;
   border-top: 2px solid var(--forest);
 }
 
@@ -266,13 +263,13 @@ ul { list-style: disc; }
 }
 
 .expertise-grid h3 {
-  font: 700 10.5px/1.2 var(--serif);
+  font: 600 16px/1.2 var(--sans);
   color: var(--ink);
   margin-bottom: 2mm;
 }
 
 .expertise-grid p {
-  font-size: 7px;
+  font-size: 9px;
   line-height: 1.5;
   color: var(--ink-soft);
 }
@@ -284,13 +281,13 @@ ul { list-style: disc; }
 .page-one-footer {
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  height: 34mm;
+  height: 32mm;
   background: var(--forest-deep);
   color: #fff;
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  padding: 6mm 9mm;
-  gap: 7mm;
+  padding: 6mm 8mm;
+  gap: 6mm;
 }
 
 .footer-quote {
@@ -300,28 +297,28 @@ ul { list-style: disc; }
 }
 
 .footer-quote p {
-  font: italic 13px/1.22 var(--serif);
-  max-width: 84mm;
+  font: italic 16px/1.25 var(--serif);
+  max-width: 88mm;
 }
 
 .footer-quote cite {
   display: block;
-  font: 400 6.5px/1 var(--sans);
+  font: 400 8px/1 var(--sans);
   font-style: normal;
-  margin-top: 2.5mm;
-  opacity: 0.6;
-  letter-spacing: 0.5px;
+  margin-top: 2mm;
+  opacity: 0.5;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .contact-bar {
-  border-left: 1px solid rgba(255,255,255,.2);
-  padding-left: 7mm;
+  border-left: 1px solid rgba(255,255,255,.15);
+  padding-left: 6mm;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2mm;
-  font-size: 7px;
+  font-size: 8px;
   font-style: normal;
   line-height: 1.3;
 }
@@ -333,26 +330,26 @@ ul { list-style: disc; }
    ================================================================ */
 
 .page-two {
-  padding: 9mm 9mm 7mm;
+  padding: 8mm 8mm 6mm;
 }
 
 .topline {
   display: flex;
   align-items: center;
-  gap: 7mm;
-  margin-bottom: 6mm;
+  gap: 6mm;
+  margin-bottom: 5mm;
 }
 
 .topline h2 {
-  font: 700 26px/1 var(--serif);
-  letter-spacing: -0.7px;
+  font: 600 28px/1 var(--serif);
+  letter-spacing: -0.5px;
   color: var(--ink);
   white-space: nowrap;
 }
 
 .topline-rule {
-  font-size: 6px;
-  letter-spacing: 1.5px;
+  font-size: 7px;
+  letter-spacing: 2px;
   color: var(--muted);
   text-transform: uppercase;
   border-bottom: 1px solid var(--rule);
@@ -371,23 +368,23 @@ ul { list-style: disc; }
 .timeline::before {
   content: "";
   position: absolute;
-  left: 23mm;
-  top: 3mm;
-  bottom: 3mm;
+  left: 22mm;
+  top: 2mm;
+  bottom: 2mm;
   width: 1px;
   background: var(--rule);
 }
 
 .role {
   display: grid;
-  grid-template-columns: 19mm 8mm 1fr;
+  grid-template-columns: 18mm 8mm 1fr;
   position: relative;
   padding-bottom: 5mm;
 }
 .role:last-child { padding-bottom: 2mm; }
 
 .role-date {
-  font: 700 10px/1.15 var(--serif);
+  font: 600 12px/1.15 var(--serif);
   color: var(--ink);
   padding-top: 0.5mm;
 }
@@ -395,6 +392,7 @@ ul { list-style: disc; }
   font-weight: 400;
   color: var(--muted);
   display: block;
+  font-size: 10px;
 }
 
 .role-dot { position: relative; }
@@ -403,30 +401,30 @@ ul { list-style: disc; }
   position: absolute;
   left: 3mm;
   top: 1.5mm;
-  width: 2.2mm;
-  height: 2.2mm;
+  width: 2mm;
+  height: 2mm;
   border-radius: 50%;
   background: var(--forest);
 }
 .role--featured .role-dot::after {
   width: 2.8mm;
   height: 2.8mm;
-  left: 2.7mm;
-  top: 1.2mm;
+  left: 2.6mm;
+  top: 1mm;
 }
 
-.role-body { padding-left: 1.5mm; }
+.role-body { padding-left: 1mm; }
 
 .role-body h3 {
-  font-size: 11px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1mm;
   color: var(--ink);
 }
 
 .company {
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
   color: var(--forest);
   margin-bottom: 2mm;
@@ -438,7 +436,7 @@ ul { list-style: disc; }
 }
 
 .role-intro {
-  font-size: 7.8px;
+  font-size: 9px;
   line-height: 1.45;
   color: var(--ink-soft);
   margin-bottom: 2mm;
@@ -449,8 +447,8 @@ ul { list-style: disc; }
 }
 
 .role-body li {
-  font-size: 7.2px;
-  line-height: 1.42;
+  font-size: 9px;
+  line-height: 1.45;
   color: var(--ink-soft);
   margin-bottom: 1mm;
 }
@@ -460,32 +458,31 @@ ul { list-style: disc; }
 /* Engagements */
 .engagements {
   background: var(--cream-dark);
-  border-radius: 2mm;
-  padding: 3.5mm;
-  margin-top: 3mm;
+  padding: 3mm;
+  margin-top: 2.5mm;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 6mm;
+  column-gap: 4mm;
 }
 
 .engagements-label {
   grid-column: 1 / -1;
-  font-size: 5.5px;
-  letter-spacing: 1.8px;
+  font-size: 6px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 2.5mm;
+  margin-bottom: 2mm;
   font-weight: 600;
 }
 
 .engagement h4 {
-  font: 700 9px/1.2 var(--sans);
+  font: 700 10px/1.2 var(--sans);
   color: var(--ink);
   margin-bottom: 0.5mm;
 }
 
 .engagement-type {
-  font-size: 6.2px;
+  font-size: 7px;
   color: var(--muted);
   display: block;
   margin-bottom: 1.5mm;
@@ -494,8 +491,8 @@ ul { list-style: disc; }
 .engagement ul { padding-left: 3mm; }
 
 .engagement li {
-  font-size: 6.5px;
-  line-height: 1.38;
+  font-size: 7.5px;
+  line-height: 1.4;
   margin-bottom: 0.8mm;
 }
 
@@ -505,7 +502,7 @@ ul { list-style: disc; }
 
 .bottom-grid {
   border-top: 1px solid var(--rule);
-  margin-top: 3mm;
+  margin-top: 4mm;
   padding-top: 5mm;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -513,8 +510,8 @@ ul { list-style: disc; }
 }
 
 .education h2 {
-  font: 700 19px/1 var(--serif);
-  letter-spacing: -0.4px;
+  font: 600 20px/1 var(--serif);
+  letter-spacing: -0.3px;
   color: var(--ink);
   margin-bottom: 4mm;
 }
@@ -522,14 +519,14 @@ ul { list-style: disc; }
 .edu-entry { margin-bottom: 3mm; }
 
 .edu-entry h3 {
-  font-size: 8.5px;
+  font-size: 10px;
   font-weight: 700;
   margin-bottom: 0.5mm;
   color: var(--ink);
 }
 
 .edu-entry p {
-  font-size: 7px;
+  font-size: 8px;
   line-height: 1.45;
   color: var(--muted);
 }
@@ -543,14 +540,14 @@ ul { list-style: disc; }
 }
 
 .cta h2 {
-  font: 700 19px/0.95 var(--serif);
+  font: 600 20px/0.95 var(--serif);
   color: var(--ink);
   margin-bottom: 3mm;
 }
 .cta h2 em { font-weight: 500; }
 
 .cta > p {
-  font-size: 7px;
+  font-size: 8px;
   line-height: 1.5;
   color: var(--muted);
   max-width: 62mm;
@@ -558,7 +555,7 @@ ul { list-style: disc; }
 }
 
 .cta-link {
-  font-size: 6.5px;
+  font-size: 7px;
   text-decoration: underline;
   color: var(--muted);
   margin-left: 4mm;
@@ -570,12 +567,12 @@ ul { list-style: disc; }
 
 .page-two-footer {
   position: absolute;
-  bottom: 4mm; left: 9mm; right: 9mm;
+  bottom: 4mm; left: 8mm; right: 8mm;
   border-top: 1px solid var(--rule);
-  padding-top: 2.5mm;
+  padding-top: 2mm;
   display: flex;
   justify-content: space-between;
-  font-size: 5.5px;
+  font-size: 6px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--muted);
@@ -601,6 +598,7 @@ ul { list-style: disc; }
   .btn:hover {
     transform: none;
     box-shadow: none;
+    opacity: 1;
   }
 }
 
@@ -638,10 +636,10 @@ ul { list-style: disc; }
     padding: 32px 24px 0;
   }
 
-  .hero-portrait::before { display: none; }
+  .brand-shape { display: none; }
 
   .hero-portrait img {
-    width: 160px;
+    width: 140px;
     max-height: none;
     border-radius: 50%;
     object-fit: cover;
@@ -649,13 +647,13 @@ ul { list-style: disc; }
   }
 
   .monogram { font-size: 32px; margin-bottom: 12px; }
-  .eyebrow { font-size: 10px; letter-spacing: 2px; margin-bottom: 8px; }
-  .hero-name { font-size: 16px; letter-spacing: 3px; margin-bottom: 8px; }
-  .tagline { font-size: 36px; margin-bottom: 16px; }
+  .eyebrow { font-size: clamp(10px, 2.5vw, 12px); letter-spacing: 2px; margin-bottom: 8px; }
+  .hero-name { font-size: clamp(24px, 7vw, 40px); letter-spacing: 1px; margin-bottom: 8px; }
+  .tagline { font-size: clamp(28px, 8vw, 48px); letter-spacing: -1px; margin-bottom: 16px; }
   .tagline br { display: none; }
-  .intro { font-size: 15px; line-height: 1.6; max-width: none; color: #C8DDD3; }
+  .intro { font-size: clamp(14px, 3.5vw, 16px); line-height: 1.6; max-width: none; color: #C8DDD3; }
   .hero-actions { padding-top: 16px; }
-  .btn { font-size: 14px; padding: 12px 24px; }
+  .btn { font-size: 13px; padding: 12px 24px; letter-spacing: 0.5px; }
   .btn span { font-size: 18px; }
 
   /* Metrics reflow */
@@ -674,14 +672,14 @@ ul { list-style: disc; }
     text-align: center;
   }
 
-  .metric strong { font-size: 28px; margin-bottom: 4px; }
-  .metric span { font-size: 11px; }
+  .metric strong { font-size: clamp(24px, 6vw, 32px); margin-bottom: 4px; }
+  .metric span { font-size: clamp(11px, 2.8vw, 13px); }
 
   /* Expertise reflow */
   .expertise { padding: 24px; }
 
   .section-header { margin-bottom: 16px; gap: 12px; }
-  .section-header h2 { font-size: 28px; }
+  .section-header h2 { font-size: clamp(24px, 5vw, 28px); }
   .header-rule { font-size: 9px; letter-spacing: 1.5px; padding-bottom: 6px; }
 
   .expertise-grid {
@@ -691,8 +689,8 @@ ul { list-style: disc; }
 
   .expertise-grid article { padding: 16px; border-top-width: 3px; }
   .expertise-icon { width: 24px; height: 24px; margin-bottom: 8px; }
-  .expertise-grid h3 { font-size: 16px; margin-bottom: 6px; }
-  .expertise-grid p { font-size: 13px; line-height: 1.5; }
+  .expertise-grid h3 { font-size: clamp(16px, 4vw, 20px); margin-bottom: 6px; }
+  .expertise-grid p { font-size: clamp(13px, 3vw, 14px); line-height: 1.5; }
 
   /* Page 1 footer */
   .page-one-footer {
@@ -703,7 +701,7 @@ ul { list-style: disc; }
     gap: 20px;
   }
 
-  .footer-quote p { font-size: 20px; max-width: none; }
+  .footer-quote p { font-size: clamp(18px, 4.5vw, 22px); max-width: none; }
   .footer-quote cite { font-size: 11px; margin-top: 8px; }
 
   .contact-bar {
@@ -711,7 +709,7 @@ ul { list-style: disc; }
     border-top: 1px solid rgba(255,255,255,.15);
     padding-left: 0;
     padding-top: 16px;
-    font-size: 13px;
+    font-size: 14px;
     gap: 8px;
   }
 
@@ -719,7 +717,7 @@ ul { list-style: disc; }
   .page-two { padding: 24px; }
 
   .topline { margin-bottom: 20px; gap: 12px; }
-  .topline h2 { font-size: 32px; }
+  .topline h2 { font-size: clamp(24px, 5vw, 32px); }
   .topline-rule { font-size: 9px; padding-bottom: 6px; }
 
   /* Timeline reflow */
@@ -745,14 +743,14 @@ ul { list-style: disc; }
     display: flex;
     gap: 4px;
   }
-  .role-date span { display: inline; }
+  .role-date span { display: inline; font-size: 14px; }
 
   .role-body { padding-left: 0; }
-  .role-body h3 { font-size: 18px; margin-bottom: 4px; }
+  .role-body h3 { font-size: clamp(16px, 4vw, 20px); margin-bottom: 4px; }
   .company { font-size: 14px; margin-bottom: 8px; }
-  .role-intro { font-size: 14px; margin-bottom: 8px; }
+  .role-intro { font-size: 15px; margin-bottom: 8px; }
   .role-body > ul { padding-left: 20px; }
-  .role-body li { font-size: 14px; line-height: 1.5; margin-bottom: 6px; }
+  .role-body li { font-size: 15px; line-height: 1.5; margin-bottom: 6px; }
 
   .engagements {
     padding: 16px;
@@ -765,7 +763,7 @@ ul { list-style: disc; }
   .engagement h4 { font-size: 15px; margin-bottom: 2px; }
   .engagement-type { font-size: 11px; margin-bottom: 6px; }
   .engagement ul { padding-left: 16px; }
-  .engagement li { font-size: 13px; line-height: 1.45; margin-bottom: 4px; }
+  .engagement li { font-size: 14px; line-height: 1.45; margin-bottom: 4px; }
 
   /* Bottom section */
   .bottom-grid {
@@ -775,7 +773,7 @@ ul { list-style: disc; }
     margin-top: 8px;
   }
 
-  .education h2 { font-size: 28px; margin-bottom: 12px; }
+  .education h2 { font-size: clamp(24px, 5vw, 28px); margin-bottom: 12px; }
   .edu-entry { margin-bottom: 12px; }
   .edu-entry h3 { font-size: 16px; margin-bottom: 2px; }
   .edu-entry p { font-size: 14px; }
@@ -787,7 +785,7 @@ ul { list-style: disc; }
     padding-top: 24px;
   }
 
-  .cta h2 { font-size: 28px; margin-bottom: 12px; }
+  .cta h2 { font-size: clamp(24px, 5vw, 28px); margin-bottom: 12px; }
   .cta h2 br { display: none; }
   .cta > p { font-size: 14px; max-width: none; margin-bottom: 16px; }
   .cta-link { font-size: 13px; margin-left: 12px; }
@@ -804,8 +802,6 @@ ul { list-style: disc; }
 /* ---- Phone ---- */
 @media (max-width: 500px) {
   .hero-portrait img { width: 120px; }
-  .tagline { font-size: 28px; }
-  .hero-name { font-size: 14px; }
 
   .metrics {
     grid-template-columns: repeat(2, 1fr);
