@@ -20,8 +20,8 @@
   --rule:        #D4CFC4;
   --rule-light:  #E8E4DA;
 
-  --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --sans:  "Inter", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --sans:  "Satoshi", "Inter", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 /* ---- Reset ---- */
