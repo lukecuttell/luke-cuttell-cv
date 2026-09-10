@@ -71,7 +71,7 @@ ul { list-style: disc; }
    ================================================================ */
 
 .hero {
-  height: 116mm;
+  height: 126mm;
   background: var(--forest-deep);
   color: #fff;
   display: grid;
@@ -81,11 +81,12 @@ ul { list-style: disc; }
 }
 
 .hero-content {
-  padding: 8mm 4mm 6mm 8mm;
+  padding: 8mm 4mm 8mm 8mm;
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .monogram {
@@ -108,7 +109,7 @@ ul { list-style: disc; }
 }
 
 .tagline {
-  font: 700 54px/0.88 var(--serif);
+  font: 600 54px/0.88 var(--serif);
   letter-spacing: -2px;
   margin-bottom: 3mm;
 }
@@ -171,7 +172,7 @@ ul { list-style: disc; }
   position: relative;
   z-index: 1;
   width: 88%;
-  max-height: 116mm;
+  max-height: 126mm;
   object-fit: cover;
   object-position: top center;
 }
@@ -281,12 +282,12 @@ ul { list-style: disc; }
 .page-one-footer {
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  height: 32mm;
+  height: 38mm;
   background: var(--forest-deep);
   color: #fff;
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  padding: 6mm 8mm;
+  padding: 7mm 8mm;
   gap: 6mm;
 }
 
@@ -317,10 +318,24 @@ ul { list-style: disc; }
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2mm;
-  font-size: 8px;
+  gap: 2.5mm;
+  font-size: 8.5px;
   font-style: normal;
   line-height: 1.3;
+}
+
+.contact-bar a,
+.contact-bar span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.contact-bar svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  opacity: 0.7;
 }
 
 .contact-bar a:hover { text-decoration: underline; }
