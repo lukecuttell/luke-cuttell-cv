@@ -303,13 +303,7 @@ ul { list-style: disc; }
 }
 
 .footer-quote cite {
-  display: block;
-  font: 400 8px/1 var(--sans);
-  font-style: normal;
-  margin-top: 2mm;
-  opacity: 0.5;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  display: none;
 }
 
 .contact-bar {
@@ -329,6 +323,7 @@ ul { list-style: disc; }
   display: flex;
   align-items: center;
   gap: 6px;
+  justify-content: flex-end;
 }
 
 .contact-bar svg {
@@ -345,7 +340,7 @@ ul { list-style: disc; }
    ================================================================ */
 
 .page-two {
-  padding: 8mm 8mm 6mm;
+  padding: 14mm 8mm 6mm;
 }
 
 .topline {
