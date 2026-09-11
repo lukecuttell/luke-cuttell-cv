@@ -13,13 +13,13 @@
   --sage:        #4A7C6F;
   --sage-light:  #7BA99A;
 
-  --cream:       #FAF7F0;
-  --cream-dark:  #F0ECE2;
-  --ink:         #1A1E1C;
-  --ink-soft:    #3D4642;
-  --muted:       #5A6862;
-  --rule:        #D4CFC4;
-  --rule-light:  #E8E4DA;
+  --cream:       #FFFFFF;
+  --cream-dark:  #F5F5F3;
+  --ink:         #1D2B27;
+  --ink-soft:    #44524E;
+  --muted:       #6B7B75;
+  --rule:        #E0E0DC;
+  --rule-light:  #EBEBEA;
 
   --serif: "Playfair Display", Georgia, "Times New Roman", serif;
   --sans:  "Satoshi", "Inter", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -31,7 +31,7 @@ html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 body {
   font-family: var(--sans);
   color: var(--ink);
-  background: #DDDAD4;
+  background: #EEECEA;
   padding: 32px;
   line-height: 1.4;
 }
@@ -98,7 +98,7 @@ ul { list-style: disc; }
   display: flex;
   align-items: center;
 }
-.monogram span { color: var(--sage); }
+.monogram span { color: var(--accent); }
 
 .eyebrow {
   font-size: 10px;
@@ -138,17 +138,18 @@ ul { list-style: disc; }
   align-items: center;
   gap: 8px;
   padding: 3mm 5mm;
+  border-radius: 100px;
   font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: none;
   transition: opacity 0.15s ease;
 }
 .btn:hover { opacity: 0.85; }
 .btn span { font-size: 14px; line-height: 1; }
 
 .btn--light { background: #fff; color: var(--forest-deep); }
-.btn--dark  { background: var(--forest); color: #fff; }
+.btn--dark  { background: var(--accent); color: #fff; }
 
 /* Portrait + Brand Shape */
 .hero-portrait {
@@ -618,7 +619,7 @@ ul { list-style: disc; }
    ================================================================ */
 
 @media (max-width: 860px) {
-  body { padding: 0; background: var(--cream); }
+  body { padding: 0; background: #fff; }
 
   .cv { gap: 0; }
 
